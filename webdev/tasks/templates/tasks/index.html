@@ -1,0 +1,20 @@
+{% extends 'tasks/layout.html' %}  <!--- html inheritance -->
+      
+{% block body %} <!--- html inheritance -->
+
+    <h1>Task</h1>
+        <ul>
+            {% for task in tasks %}
+                <li>{{ task }}</li>
+            {% empty %}
+            <h1>No tasks yet</h1>
+            {% endfor %}
+           
+        </ul>
+        <a href="{% url 'tasks:add' %}">Add new task </a> <!-- link from urlpattern urls-->
+
+{% endblock  %}
+
+
+
+
